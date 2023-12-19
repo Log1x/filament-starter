@@ -4,7 +4,7 @@ This is my preferred defaults to quickly bootstrap a project utilizing the TALL 
 
 ## Features
 
-- 🗃️ Quick, clean starting point with an example **Post** model.
+- 🚀 Quick, clean starting point with an example **Post** model.
 - 🧑‍💻 Fully pre-configured and customized Filament panel with best practices in place.
 - 💄 TailwindCSS and Vite ready for immediate use.
 - 🎨 Pre-bundled Livewire and Alpine for easy extendability.
@@ -31,6 +31,11 @@ $ cd filament-starter
 $ cp .env.example .env
 $ composer install
 $ php artisan key:generate
+```
+
+After `.env` is configured, you can proceed to seed the database:
+
+```sh
 $ php artisan migrate:fresh --seed
 ```
 
