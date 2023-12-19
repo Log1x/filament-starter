@@ -36,7 +36,8 @@ class Show extends Component
     {
         seo()
             ->title($this->post->title)
-            ->description($this->post->excerpt);
+            ->description($this->post->excerpt)
+            ->canonical($this->post->url);
 
         return view('livewire.post.show');
     }

@@ -19,7 +19,8 @@ class Home extends Component
     {
         seo()
             ->title('Filament Starter')
-            ->description('Lorem ipsum...');
+            ->description('Lorem ipsum...')
+            ->canonical(route('home'));
 
         $posts = Post::published()
             ->latest('published_at')
