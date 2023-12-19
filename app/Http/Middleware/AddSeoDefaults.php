@@ -85,7 +85,7 @@ class AddSeoDefaults
 
             Twitter::make()
                 ->name('image')
-                ->content(url('/apple-touch-icon.png')),
+                ->content(asset('/apple-touch-icon.png')),
         ]);
 
         return $next($request);
