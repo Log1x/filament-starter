@@ -5,7 +5,7 @@ This is my preferred defaults to quickly bootstrap a project utilizing the TALL 
 ## Features
 
 - 🔥 Quick, clean starting point with an example **Post** model.
-- 🔥 Fully pre-configured Filament panel with best practices in place.
+- 🔥 Fully pre-configured and customized Filament panel with best practices in place.
 - 🔥 Easy programmatic SEO using [romanzipp/laravel-seo](https://github.com/romanzipp/Laravel-SEO).
 - 🔥 Pre-bundled Livewire and Alpine for easy extendability.
 - 🔥 SPA-ready in both Filament and the frontend.
