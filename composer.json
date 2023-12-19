@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "awcodes/filament-gravatar": "^2.0",
         "bezhansalleh/filament-exceptions": "^2.0",
         "filament/filament": "^3.1",
         "guzzlehttp/guzzle": "^7.2",
