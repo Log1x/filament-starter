@@ -12,6 +12,8 @@ This is my preferred defaults to quickly bootstrap a project utilizing the TALL 
 - 🔍️ Easy programmatic SEO using [romanzipp/laravel-seo](https://github.com/romanzipp/Laravel-SEO).
 - 📝 Automatic sitemap generation using [spatie/laravel-sitemap](https://github.com/spatie/laravel-sitemap).
 
+![Screenshot](https://i.imgur.com/ebTvq07.png)
+
 ## Requirements
 
 Make sure all dependencies have been installed before moving on:
