@@ -7,9 +7,12 @@ use App\Models\Post;
 use Filament\Forms;
 use Filament\Forms\Components\Builder;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
 
 class PostResource extends Resource
 {
@@ -61,6 +64,14 @@ class PostResource extends Resource
                             ->schema([
                                 Forms\Components\TextInput::make('title')
                                     ->placeholder('Enter a title')
+                                    ->live()
+                                    ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
+                                        if (($get('slug') ?? '') !== Str::slug($old)) {
+                                            return;
+                                        }
+
+                                        $set('slug', Str::slug($state));
+                                    })
                                     ->required()
                                     ->maxLength(255)
                                     ->autofocus(),
@@ -107,6 +118,7 @@ class PostResource extends Resource
                             ->schema([
                                 Forms\Components\TextInput::make('slug')
                                     ->placeholder('Enter a slug')
+                                    ->alphaDash()
                                     ->required()
                                     ->maxLength(255),
 
