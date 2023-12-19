@@ -21,6 +21,14 @@ $ cd filament-starter
 $ cp .env.example .env
 $ composer install
 $ php artisan key:generate
+$ php artisan migrate:fresh --seed
+```
+
+Once the database is seeded, you can login at `/admin` using the default admin user:
+
+```sh
+Username: admin@admin.test
+Password: admin
 ```
 
 ### Build Assets
