@@ -51,4 +51,14 @@ class User extends Authenticatable implements FilamentUser
     {
         return true;
     }
+
+    /**
+     * The posts that belong to the user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }
