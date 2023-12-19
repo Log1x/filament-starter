@@ -19,7 +19,7 @@ class PostResource extends Resource
     /**
      * The resource record title.
      */
-    protected static ?string $recordTitleAttribute = 'name';
+    protected static ?string $recordTitleAttribute = 'title';
 
     /**
      * The resource model.
