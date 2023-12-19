@@ -19,6 +19,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Jeffgreco13\FilamentBreezy\BreezyCore;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -32,6 +33,13 @@ class AdminPanelProvider extends PanelProvider
             ->profile()
             ->spa()
             ->plugins([
+                BreezyCore::make()
+                    ->myProfile(
+                        shouldRegisterUserMenu: true,
+                        shouldRegisterNavigation: false,
+                        hasAvatars: false
+                    )
+                    ->enableTwoFactorAuthentication(),
                 FilamentExceptionsPlugin::make(),
             ])
             ->favicon(asset('/favicon-32x32.png'))
