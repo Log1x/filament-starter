@@ -2,8 +2,6 @@
 
 This is my preferred defaults to quickly bootstrap a project utilizing the TALL stack with Filament for the backend.
 
-![Screenshot](https://i.imgur.com/ebTvq07.png)
-
 ## Features
 
 - 🗃️ Quick, clean starting point with an example **Post** model.
@@ -42,6 +40,8 @@ Once the database is seeded, you can login at `/admin` using the default admin u
 Username: admin
 Password: admin
 ```
+
+![Screenshot](https://i.imgur.com/ebTvq07.png)
 
 ### Build Assets
 
