@@ -29,6 +29,16 @@ class PostResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     /**
+     * The resource navigation group.
+     */
+    protected static ?string $navigationGroup = 'Collections';
+
+    /**
+     * The resource navigation sort order.
+     */
+    protected static ?int $navigationSort = 0;
+
+    /**
      * Get the navigation badge for the resource.
      */
     public static function getNavigationBadge(): ?string
