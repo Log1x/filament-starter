@@ -4,11 +4,12 @@ This is my preferred defaults to quickly bootstrap a project utilizing the TALL 
 
 ## Features
 
-- 🚀 Quick, clean starting point with an example **Post** model.
+- 🚀 Quick, clean starting point with an example **Post** model and resource.
 - 🧑‍💻 Fully pre-configured and customized Filament panel with best practices in place.
 - 💄 TailwindCSS and Vite ready for immediate use.
 - 🎨 Pre-bundled Livewire and Alpine for easy extendability.
 - ⚡️ SPA-ready in both Filament and the frontend.
+- 👷 GitHub Actions workflows for Pint and pre-configured Dependabot for dependencies.
 - 🔍️ Easy programmatic SEO using [romanzipp/laravel-seo](https://github.com/romanzipp/Laravel-SEO).
 - 📝 Automatic sitemap generation using [spatie/laravel-sitemap](https://github.com/spatie/laravel-sitemap).
 
