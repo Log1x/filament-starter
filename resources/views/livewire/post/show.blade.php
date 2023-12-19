@@ -12,7 +12,11 @@
   </h1>
 
   <div class="mt-1 text-sm">
-    Posted by {{ $post->user->name }} on {{ $post->published_at->format('F j, Y') }}
+    Posted by {{ $post->user->name }}
+
+    <span class="cursor-help" x-tooltip.raw="{{ $post->published_at->format('F j, Y') }}">
+      {{ $post->published_at->diffForHumans() }}
+    </span>
   </div>
 
   <div class="pt-6 mt-4 prose border-t">
