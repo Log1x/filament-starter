@@ -50,6 +50,7 @@ class AdminPanelProvider extends PanelProvider
             ->brandLogo(fn () => view('components.logo'))
             ->navigationGroups([
                 'Collections',
+                'Settings',
             ])
             ->colors([
                 'primary' => Color::Blue,
