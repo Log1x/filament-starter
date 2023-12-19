@@ -76,4 +76,15 @@ class Post extends Model
     {
         return $query->where('is_published', true);
     }
+
+    /**
+     * Retrieve the draft posts.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeDrafts($query)
+    {
+        return $query->where('is_published', false);
+    }
 }
