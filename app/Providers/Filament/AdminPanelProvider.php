@@ -30,6 +30,7 @@ class AdminPanelProvider extends PanelProvider
             ->login(Login::class)
             ->profile()
             ->spa()
+            ->favicon(asset('/favicon-32x32.png'))
             ->brandLogo(fn () => view('components.logo'))
             ->navigationGroups([
                 'Collections',
