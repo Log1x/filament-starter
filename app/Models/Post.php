@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 
 class Post extends Model
 {
@@ -64,6 +66,24 @@ class Post extends Model
         return json_decode(
             collect($this->content ?? [])->toJson()
         );
+    }
+
+    /**
+     * Retrieve the post excerpt.
+     *
+     * @return string
+     */
+    public function getExcerptAttribute()
+    {
+        $excerpt = collect($this->content)
+            ->where('type', 'markdown')
+            ->first() ?? [];
+
+        $excerpt = collect(
+            explode("\n", Arr::get($excerpt, 'data.content', ''))
+        )->first();
+
+        return Str::limit($excerpt, 160);
     }
 
     /**
