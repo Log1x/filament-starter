@@ -123,6 +123,7 @@ class PostResource extends Resource
                                     ->maxLength(255),
 
                                 Forms\Components\Select::make('user_id')
+                                    ->label('Author')
                                     ->relationship('user', 'name')
                                     ->default(fn () => auth()->id())
                                     ->searchable()
@@ -148,6 +149,7 @@ class PostResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('user.name')
+                    ->label('Author')
                     ->badge()
                     ->sortable(),
 
