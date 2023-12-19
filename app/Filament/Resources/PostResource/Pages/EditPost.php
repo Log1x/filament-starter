@@ -19,6 +19,11 @@ class EditPost extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
+            Actions\Action::make('view')
+                ->label('View post')
+                ->url(fn ($record) => $record->url)
+                ->extraAttributes(['target' => '_blank']),
+
             Actions\DeleteAction::make(),
         ];
     }
