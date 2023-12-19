@@ -19,7 +19,10 @@ class PostFactory extends Factory
         return [
             'title' => $this->faker->sentence(),
             'slug' => $this->faker->slug(),
-            'content' => [],
+            'content' => [[
+                'type' => 'markdown',
+                'data' => ['content' => $this->faker->paragraphs(5, true)],
+            ]],
             'user_id' => 1,
             'is_published' => $this->faker->boolean(75),
             'published_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
