@@ -1,6 +1,6 @@
 # Filament Starter
 
-This is my preferred defaults to quickly bootstrap a project utilizing the TALL stack with Filament for the backend.
+This is my preferred defaults to quickly bootstrap a project utilizing the TALL stack with Filament for the admin panel.
 
 ## Features
 
