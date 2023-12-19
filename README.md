@@ -62,4 +62,4 @@ Contributing whether it be through PRs, reporting an issue, or suggesting an ide
 
 ## License
 
-This project and it's codebase is proprietary and not available for public use.
+Filament Starter is provided under the [MIT License](LICENSE.md).
