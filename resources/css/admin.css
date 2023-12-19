@@ -11,3 +11,10 @@
 .dark .fi-topbar nav {
   @apply !border-0;
 }
+
+.fi-header-heading,
+.fi-wi-stats-overview-stat-icon,
+.fi-section-header-icon,
+.fi-ta-text-item-icon {
+  @apply !text-primary-500;
+}
