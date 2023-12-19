@@ -2,6 +2,8 @@
 
 This is my preferred defaults to quickly bootstrap a project utilizing the TALL stack with Filament for the backend.
 
+![Screenshot](https://i.imgur.com/ebTvq07.png)
+
 ## Features
 
 - 🗃️ Quick, clean starting point with an example **Post** model.
@@ -11,8 +13,6 @@ This is my preferred defaults to quickly bootstrap a project utilizing the TALL 
 - ⚡️ SPA-ready in both Filament and the frontend.
 - 🔍️ Easy programmatic SEO using [romanzipp/laravel-seo](https://github.com/romanzipp/Laravel-SEO).
 - 📝 Automatic sitemap generation using [spatie/laravel-sitemap](https://github.com/spatie/laravel-sitemap).
-
-![Screenshot](https://i.imgur.com/ebTvq07.png)
 
 ## Requirements
 
