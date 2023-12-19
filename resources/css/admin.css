@@ -1,0 +1,13 @@
+@import '../../vendor/filament/filament/resources/css/theme.css';
+
+@config '../../tailwind.admin.js';
+
+.dark .fi-sidebar,
+.dark .fi-sidebar-header,
+.dark .fi-topbar nav {
+  @apply !bg-[#111] !ring-0;
+}
+
+.dark .fi-topbar nav {
+  @apply !border-0;
+}
