@@ -5,12 +5,12 @@
     "src": "resources/css/admin.css"
   },
   "resources/css/app.css": {
-    "file": "assets/app-01794219.css",
+    "file": "assets/app-7854da16.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-0a754163.js",
+    "file": "assets/app-07734249.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
