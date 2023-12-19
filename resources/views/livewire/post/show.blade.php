@@ -19,7 +19,7 @@
     @foreach ($post->blocks as $block)
       @switch($block->type)
         @case('markdown')
-          {!! Str::markdown($block->data->content) !!}
+          @markdom($block->data->content)
         @break
 
         @case('figure')
