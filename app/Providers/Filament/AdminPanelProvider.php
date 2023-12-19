@@ -27,6 +27,8 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->profile()
+            ->spa()
             ->brandLogo(fn () => view('components.logo'))
             ->navigationGroups([
                 'Collections',
