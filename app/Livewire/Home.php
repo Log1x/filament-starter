@@ -17,6 +17,10 @@ class Home extends Component
      */
     public function render()
     {
+        seo()
+            ->title('Filament Starter')
+            ->description('Lorem ipsum...');
+
         $posts = Post::published()
             ->latest('published_at')
             ->paginate(10);

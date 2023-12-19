@@ -34,6 +34,10 @@ class Show extends Component
      */
     public function render()
     {
+        seo()
+            ->title($this->post->title)
+            ->description($this->post->excerpt);
+
         return view('livewire.post.show');
     }
 }
