@@ -16,7 +16,8 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.3",
         "romanzipp/laravel-seo": "^2.6",
-        "sinnbeck/markdom": "^2.0"
+        "sinnbeck/markdom": "^2.0",
+        "spatie/laravel-sitemap": "^7.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
