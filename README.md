@@ -27,17 +27,17 @@ Make sure all dependencies have been installed before moving on:
 Start by cloning the Filament Starter repository and initializing the `.env` file:
 
 ```sh
-$ git clone --depth=1 git@github.com:log1x/filament-starter.git
-$ cd filament-starter
-$ cp .env.example .env
-$ composer install
-$ php artisan key:generate
+git clone --depth=1 git@github.com:log1x/filament-starter.git
+cd filament-starter
+cp .env.example .env
+composer install
+php artisan key:generate
 ```
 
 After `.env` is configured, you can proceed to seed the database:
 
 ```sh
-$ php artisan migrate:fresh --seed
+php artisan migrate:fresh --seed
 ```
 
 Once the database is seeded, you can login at `/admin` using the default admin user:
