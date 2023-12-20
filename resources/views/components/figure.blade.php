@@ -3,7 +3,7 @@
 <figure>
   <img
     class="object-cover w-full border rounded-lg shadow"
-    src="{{ url($image) }}"
+    src="{{ Awcodes\Curator\Models\Media::find($image)?->url ?? $image }}"
     alt="{{ $alt }}"
   >
 

@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\PostResource\Pages;
 use App\Models\Post;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms;
 use Filament\Forms\Components\Builder;
 use Filament\Forms\Form;
@@ -91,8 +92,7 @@ class PostResource extends Resource
 
                                         Builder\Block::make('figure')
                                             ->schema([
-                                                Forms\Components\FileUpload::make('image')
-                                                    ->image()
+                                                CuratorPicker::make('image')
                                                     ->required(),
 
                                                 Forms\Components\Fieldset::make()
