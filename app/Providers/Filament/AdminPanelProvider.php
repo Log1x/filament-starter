@@ -7,6 +7,7 @@ use Awcodes\Curator\CuratorPlugin;
 use Awcodes\FilamentGravatar\GravatarPlugin;
 use Awcodes\FilamentGravatar\GravatarProvider;
 use BezhanSalleh\FilamentExceptions\FilamentExceptionsPlugin;
+use Croustibat\FilamentJobsMonitor\FilamentJobsMonitorPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -51,6 +52,9 @@ class AdminPanelProvider extends PanelProvider
                     ->navigationGroup('Media')
                     ->navigationCountBadge(),
                 FilamentExceptionsPlugin::make(),
+                FilamentJobsMonitorPlugin::make()
+                    ->navigationCountBadge()
+                    ->navigationGroup('Settings'),
                 FilamentPeekPlugin::make()
                     ->disablePluginStyles(),
                 GravatarPlugin::make(),
