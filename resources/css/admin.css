@@ -1,5 +1,8 @@
 @import '../../vendor/filament/filament/resources/css/theme.css';
+@import '../../vendor/awcodes/filament-curator/resources/css/plugin.css';
 @import '../../vendor/pboivin/filament-peek/resources/css/plugin.css';
+
+@import 'cropperjs/dist/cropper.css';
 
 @config '../../tailwind.admin.js';
 
