@@ -22,6 +22,7 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Jeffgreco13\FilamentBreezy\BreezyCore;
+use Pboivin\FilamentPeek\FilamentPeekPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -44,6 +45,8 @@ class AdminPanelProvider extends PanelProvider
                     ->enableTwoFactorAuthentication(),
                 GravatarPlugin::make(),
                 FilamentExceptionsPlugin::make(),
+                FilamentPeekPlugin::make()
+                    ->disablePluginStyles(),
             ])
             ->defaultAvatarProvider(GravatarProvider::class)
             ->favicon(asset('/favicon-32x32.png'))

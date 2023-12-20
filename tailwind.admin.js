@@ -9,5 +9,6 @@ export default {
     './vendor/filament/**/*.blade.php',
     './vendor/bezhansalleh/filament-exceptions/resources/**/*.blade.php',
     './vendor/jeffgreco13/filament-breezy/resources/**/*.blade.php',
+    './vendor/pboivin/filament-peek/resources/views/**/*.blade.php',
   ],
 }
