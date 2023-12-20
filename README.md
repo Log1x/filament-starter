@@ -37,7 +37,7 @@ php artisan key:generate
 After `.env` is configured, you can proceed to seed the database:
 
 ```sh
-$ php artisan migrate:fresh --seed
+php artisan migrate:fresh --seed
 ```
 
 Once the database is seeded, you can login at `/admin` using the default admin user:
