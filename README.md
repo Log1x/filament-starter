@@ -47,7 +47,7 @@ Username: admin
 Password: admin
 ```
 
-![Filament Screenshot](https://i.imgur.com/fJUNYIj.png)
+![Filament Screenshot](https://i.imgur.com/cFZZzMb.png)
 
 ### Build Assets
 
