@@ -13,6 +13,7 @@ return [
         'color' => 'success',
         'exclude' => [
             BezhanSalleh\FilamentExceptions\Resources\ExceptionResource::class,
+            Croustibat\FilamentJobsMonitor\Resources\QueueMonitorResource::class,
         ],
     ],
 
