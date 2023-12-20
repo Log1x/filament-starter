@@ -148,13 +148,13 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('title')
+                    ->searchable(),
+
                 Tables\Columns\TextColumn::make('user.name')
                     ->label('Author')
                     ->badge()
                     ->sortable(),
-
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
 
                 Tables\Columns\IconColumn::make('is_published')
                     ->label('Published')
