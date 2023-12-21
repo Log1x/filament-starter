@@ -6,7 +6,7 @@ This is my preferred starting point to quickly bootstrap [TALL stack](https://ta
 
 - 🚀 Quick, clean starting point with an example **Post** model and resource.
 - 🧑‍💻 Fully pre-configured and [customized](#plugins-used) Filament panel with best practices in place.
-- 🎨 Clean, minimally styled frontend powered by Livewire.
+- 🎨 Clean, [minimally styled](#screenshots) frontend powered by Livewire.
 - 💄 TailwindCSS and Vite ready for immediate use.
 - 👷 Pre-bundled Livewire and Alpine for easy extendability.
 - ⚡️ SPA-ready in both Filament and the frontend.
@@ -48,9 +48,6 @@ Username: admin
 Password: admin
 ```
 
-![Frontend Screenshot](https://i.imgur.com/eLpZC0S.png)
-![Filament Screenshot](https://i.imgur.com/Zi1XGMd.png)
-
 ### Build Assets
 
 The project assets are compiled using Vite. This can be done by installing the dependencies and running the build command with Yarn.
@@ -59,6 +56,11 @@ The project assets are compiled using Vite. This can be done by installing the d
 yarn install
 yarn build
 ```
+
+## Screenshots
+
+![Frontend Screenshot](https://i.imgur.com/eLpZC0S.png)
+![Filament Screenshot](https://i.imgur.com/Zi1XGMd.png)
 
 ## Plugins Used
 
