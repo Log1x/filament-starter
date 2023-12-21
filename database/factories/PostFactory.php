@@ -17,9 +17,15 @@ class PostFactory extends Factory
     public function definition(): array
     {
         $content = [
-            $this->faker->paragraphs(3, true),
+            $this->faker->paragraphs(2, true),
             "## {$this->faker->sentence()}",
             $this->faker->paragraphs(3, true),
+            "## {$this->faker->sentence()}",
+            $this->faker->paragraphs(2, true),
+            "### {$this->faker->sentence()}",
+            $this->faker->paragraphs(3, true),
+            "### {$this->faker->sentence()}",
+            $this->faker->paragraphs(2, true),
             "## {$this->faker->sentence()}",
             $this->faker->paragraphs(3, true),
         ];
