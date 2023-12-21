@@ -26,15 +26,11 @@ class Show extends Component
      */
     public function mount($post)
     {
-        $this->post = Post::whereSlug($post);
+        $this->post = Post::whereSlug($post)->firstOrFail();
 
         $this->handlePreview();
 
-        if (! $this->isPreview) {
-            $this->post = $this->post->published();
-        }
-
-        $this->post = $this->post->firstOrFail();
+        abort_unless($this->isPreview || $this->post->is_published, 404);
     }
 
     /**
