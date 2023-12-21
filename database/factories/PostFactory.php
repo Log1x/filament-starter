@@ -16,12 +16,20 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
+        $content = [
+            $this->faker->paragraphs(3, true),
+            "## {$this->faker->sentence()}",
+            $this->faker->paragraphs(3, true),
+            "## {$this->faker->sentence()}",
+            $this->faker->paragraphs(3, true),
+        ];
+
         return [
             'title' => $this->faker->sentence(),
             'slug' => $this->faker->slug(),
             'content' => [[
                 'type' => 'markdown',
-                'data' => ['content' => $this->faker->paragraphs(5, true)],
+                'data' => ['content' => implode("\n\n", $content)],
             ]],
             'user_id' => 1,
             'is_published' => $this->faker->boolean(75),
