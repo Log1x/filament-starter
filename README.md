@@ -1,11 +1,11 @@
 # Filament Starter
 
-This is my preferred defaults to quickly bootstrap a project utilizing the TALL stack with Filament for the admin panel.
+This is my preferred defaults to quickly bootstrap a [TALL stack](https://tallstack.dev/) project utilizing [Filament](https://filamentphp.com/) for the admin panel.
 
 ## Features
 
 - 🚀 Quick, clean starting point with an example **Post** model and resource.
-- 🧑‍💻 Fully pre-configured and customized Filament panel with best practices in place.
+- 🧑‍💻 Fully pre-configured and [customized](#plugins-used) Filament panel with best practices in place.
 - 💄 TailwindCSS and Vite ready for immediate use.
 - 🎨 Pre-bundled Livewire and Alpine for easy extendability.
 - ⚡️ SPA-ready in both Filament and the frontend.
@@ -57,6 +57,20 @@ The project assets are compiled using Vite. This can be done by installing the d
 $ yarn install
 $ yarn build
 ```
+
+## Plugins Used
+
+The following Filament plugins come fully implemented and configured out of the box:
+
+| **Plugin**                                                          | **Description**                                    | **Author**                                      |
+| :------------------------------------------------------------------ | :------------------------------------------------- | :---------------------------------------------- |
+| [Curator](https://github.com/awcodes/filament-curator)              | A beautiful media library.                         | [awcodes](https://github.com/awcodes)           |
+| [Gravatar](https://github.com/awcodes/filament-gravatar)            | Easy avatar integration powered by Gravatar.       | [awcodes](https://github.com/awcodes)           |
+| [Exceptions](https://github.com/bezhansalleh/filament-exceptions)   | A simple but powerful Exception viewer.            | [bezhansalleh](https://github.com/bezhansalleh) |
+| [Jobs Monitor](https://github.com/croustibat/filament-jobs-monitor) | Easily monitor background jobs and their progress. | [croustibat](https://github.com/croustibat)     |
+| [Breezy](https://github.com/jeffgreco13/filament-breezy)            | Customizable user profile pages and 2FA support.   | [jeffgreco13](https://github.com/z3d0x)         |
+| [Peek](https://github.com/pboivin/filament-peek)                    | Quick & efficient front-end previews of resources. | [pboivin](https://github.com/pboivin)           |
+| [Logger](https://github.com/z3d0x/filament-logger)                  | Zero-config resource activity logging.             | [z3d0x](https://github.com/z3d0x)               |
 
 ## Bug Reports
 
