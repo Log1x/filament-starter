@@ -2,7 +2,7 @@
 
 This is my preferred starting point to quickly bootstrap [TALL stack](https://tallstack.dev/) projects utilizing [Filament](https://filamentphp.com/) for the admin panel.
 
-![Screenshot](https://i.imgur.com/NlYO6yn.png)
+![Screenshot](https://i.imgur.com/AxerbeO.png)
 
 ## Features
 
