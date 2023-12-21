@@ -1,8 +1,10 @@
-import preset from './vendor/filament/filament/tailwind.config.preset'
-import defaultConfig from './tailwind.config'
+/** @type {import('tailwindcss').Config} */
 
-export default {
-  presets: [preset, defaultConfig],
+const filamentConfig = require('./vendor/filament/filament/tailwind.config.preset')
+const defaultConfig = require('./tailwind.config')
+
+module.exports = {
+  presets: [defaultConfig, filamentConfig],
   content: [
     './app/Filament/**/*.php',
     './resources/views/filament/**/*.blade.php',
