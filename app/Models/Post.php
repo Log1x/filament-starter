@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Filament\Resources\PostResource;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -63,7 +64,7 @@ class Post extends Model
      */
     public function getEditUrlAttribute()
     {
-        return route('filament.admin.resources.posts.edit', ['record' => $this]);
+        return PostResource::getUrl('edit', ['record' => $this]);
     }
 
     /**
