@@ -2,6 +2,8 @@
 
 This is my preferred starting point to quickly bootstrap [TALL stack](https://tallstack.dev/) projects utilizing [Filament](https://filamentphp.com/) for the admin panel.
 
+![Screenshot](https://i.imgur.com/NlYO6yn.png)
+
 ## Features
 
 - 🚀 Quick, clean starting point with an example **Post** model and resource.
@@ -56,11 +58,6 @@ The project assets are compiled using Vite. This can be done by installing the d
 yarn install
 yarn build
 ```
-
-## Screenshots
-
-![Frontend Screenshot](https://i.imgur.com/eLpZC0S.png)
-![Filament Screenshot](https://i.imgur.com/Zi1XGMd.png)
 
 ## Plugins Used
 
