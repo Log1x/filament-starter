@@ -8,8 +8,6 @@
   'iconRight' => null,
 ])
 
-@php($tag = $url ? 'a' : $tag)
-
 @php($iconSize = match ($size) {
   'xs' => 'w-3 h-3',
   'sm' => 'w-4 h-4',
@@ -32,6 +30,8 @@
   'gray' => 'bg-gray-500 hover:bg-gray-600 text-white',
   default => 'bg-primary-500 hover:bg-primary-600 text-white',
 })
+
+@php($tag = $url ? 'a' : $tag)
 
 @if ($url)
   @php($attributes = $attributes->merge(['href' => $url]))
