@@ -57,7 +57,17 @@ class Post extends Model
     }
 
     /**
-     * Retrieve the post content as an object.
+     * Retrieve the post edit URL.
+     *
+     * @return string
+     */
+    public function getEditUrlAttribute()
+    {
+        return route('filament.admin.resources.posts.edit', ['record' => $this]);
+    }
+
+    /**
+     * Retrieve the post content blocks as an object.
      *
      * @return object
      */
