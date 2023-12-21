@@ -1,6 +1,6 @@
 # Filament Starter
 
-This is my preferred defaults to quickly bootstrap a [TALL stack](https://tallstack.dev/) project utilizing [Filament](https://filamentphp.com/) for the admin panel.
+This is my preferred starting point to quickly bootstrap a [TALL stack](https://tallstack.dev/) project utilizing [Filament](https://filamentphp.com/) for the admin panel.
 
 ## Features
 
