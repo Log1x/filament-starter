@@ -60,7 +60,7 @@ $ yarn build
 
 ## Plugins Used
 
-The following Filament plugins come fully implemented and configured out of the box:
+The following [Filament plugins](https://filamentphp.com/plugins) come fully implemented and configured out of the box:
 
 | **Plugin**                                                          | **Description**                                    | **Author**                                      |
 | :------------------------------------------------------------------ | :------------------------------------------------- | :---------------------------------------------- |
