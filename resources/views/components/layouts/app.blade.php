@@ -9,9 +9,15 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
 
-  <body class="text-base leading-normal tracking-normal text-gray-800 transition-colors">
-    <div class="max-w-lg px-4 py-8 mx-auto">
-      {{ $slot }}
+  <body class="text-base leading-normal tracking-normal text-gray-800">
+    <div class="flex flex-col min-h-screen">
+      <x-sections.header />
+
+      <div class="flex-1">
+        {{ $slot }}
+      </div>
+
+      <x-sections.footer />
     </div>
 
     @livewireScriptConfig

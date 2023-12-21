@@ -1,42 +1,58 @@
 <div>
-  <a
-    href="{{ route('home') }}"
-    class="text-sm text-blue-500 transition-colors hover:text-blue-600"
-    wire:navigate
-  >
-    &larr; Back
-  </a>
-
-  <h1 class="mt-4 text-4xl">
-    {{ $post->title }}
-  </h1>
-
-  <div class="mt-1 text-sm">
-    Posted by {{ $post->user->name }}
-
-    <span class="cursor-help" x-tooltip.raw="{{ $post->published_at->format('F j, Y') }}">
-      {{ $post->published_at->diffForHumans() }}
-    </span>
+  <div class="hidden bg-black md:block bg-opacity-90">
+    <x-container>
+      {{ Breadcrumbs::render('post', $post) }}
+    </x-container>
   </div>
 
-  <div class="pt-6 mt-4 prose border-t">
-    @foreach ($post->blocks as $block)
-      @switch($block->type)
-        @case('markdown')
-          @markdom($block->data->content)
-        @break
+  <article>
+    <x-hero :title="$post->title">
+      @slot('afterTitle')
+        <div>Posted by {{ $post->user->name }}</div>
 
-        @case('figure')
-          <x-figure
-            :image="$block->data->image"
-            :alt="$block->data->alt"
-            :caption="$block->data->caption"
-          />
-        @break
+        <div
+          class="inline-flex items-center text-xs cursor-help"
+          x-tooltip.raw="{{ $post->published_at->format('F j, Y') }}"
+        >
+          <x-heroicon-o-calendar class="w-3 h-3 mr-1" />
 
-        @default
-          @dump($block)
-      @endswitch
-    @endforeach
-  </div>
+          <time datetime="{{ $post->published_at->format('Y-m-d H:i:s') }}">
+            {{ $post->published_at->diffForHumans() }}
+          </time>
+        </div>
+      @endslot
+    </x-hero>
+
+    <x-container>
+      <div class="prose max-w-none">
+        @foreach ($post->blocks as $block)
+          @switch($block->type)
+            @case('markdown')
+              @markdom($block->data->content)
+            @break
+
+            @case('figure')
+              <x-figure
+                :image="$block->data->image"
+                :alt="$block->data->alt"
+                :caption="$block->data->caption"
+              />
+            @break
+
+            @default
+              @dump($block)
+          @endswitch
+        @endforeach
+      </div>
+
+      @if (Auth::check())
+        <div class="pt-4 mt-4 border-t">
+          <a class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600" href="{{ $post->editUrl }}">
+            <x-heroicon-s-pencil class="inline-block w-3 h-3 mr-2" />
+            Edit post
+          </a>
+        </div>
+      @endif
+    </x-container>
+  </article>
 </div>
