@@ -11,24 +11,13 @@
       </a>
 
       <div>
-        <a
-          wire:navigate
-          href="{{ route('home') }}"
-          class="px-4 py-2 text-sm transition-colors hover:text-primary-500"
+        <x-button
+          :icon="Auth::check() ? 'heroicon-o-cog' : 'heroicon-o-user'"
+          size="xs"
+          url="/admin"
         >
-          Home
-        </a>
-
-        @if (Auth::check())
-          <x-button
-            class="ml-4"
-            icon="heroicon-o-cog"
-            size="xs"
-            url="/admin"
-          >
-            Manage
-          </x-button>
-        @endif
+          {{ Auth::check() ? 'Admin' : 'Login' }}
+        </x-button>
       </div>
     </nav>
   </x-container>
