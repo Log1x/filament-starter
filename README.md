@@ -34,7 +34,7 @@ composer install
 php artisan key:generate
 ```
 
-After `.env` is configured, you can proceed to seed the database:
+After `.env` is configured, you can proceed to migrate & seed the database:
 
 ```sh
 php artisan migrate:fresh --seed
