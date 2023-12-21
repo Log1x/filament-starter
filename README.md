@@ -54,8 +54,8 @@ Password: admin
 The project assets are compiled using Vite. This can be done by installing the dependencies and running the build command with Yarn.
 
 ```sh
-$ yarn install
-$ yarn build
+yarn install
+yarn build
 ```
 
 ## Plugins Used
