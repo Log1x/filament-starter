@@ -25,9 +25,15 @@ class Show extends Component
      */
     public function mount($post)
     {
-        $this->post = Post::published()
-            ->whereSlug($post)
-            ->firstOrFail();
+        $this->post = Post::whereSlug($post);
+
+        $this->handlePreview();
+
+        if (! $this->isPreview) {
+            $this->post = $this->post->published();
+        }
+
+        $this->post = $this->post->firstOrFail();
     }
 
     /**
@@ -37,8 +43,6 @@ class Show extends Component
      */
     public function render()
     {
-        $this->handlePreview();
-
         seo()
             ->title($this->post->title)
             ->description($this->post->excerpt)
