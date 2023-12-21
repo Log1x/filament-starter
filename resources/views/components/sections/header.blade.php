@@ -16,7 +16,7 @@
           size="xs"
           url="/admin"
         >
-          {{ Auth::check() ? 'Admin' : 'Login' }}
+          {{ Auth::check() ? 'Manage' : 'Login' }}
         </x-button>
       </div>
     </nav>
