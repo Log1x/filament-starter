@@ -1,31 +1,35 @@
 <div>
-  <h1 class="text-4xl mb-6">
-    Latest Posts
-  </h1>
+  <x-hero title="Home" />
 
-  <ul class="list-disc ml-4 space-y-1">
-    @foreach ($posts as $post)
-      <li>
-        <a
-          class="text-blue-500 hover:text-blue-600 transition-colors"
-          href="{{ $post->url }}"
-          wire:navigate
-        >
-          {{ $post->title }}
-        </a>
-      </li>
-    @endforeach
+  <x-container>
+    <h2 class="mb-6 text-4xl">
+      Latest Posts
+    </h2>
 
-    @empty($posts)
-      <li class="text-gray-500">
-        No posts yet.
-      </li>
-    @endempty
-  </ul>
+    <ul class="ml-4 space-y-1 list-disc">
+      @foreach ($posts as $post)
+        <li>
+          <a
+            class="text-primary-500 transition-colors hover:text-primary-600"
+            href="{{ $post->url }}"
+            wire:navigate
+          >
+            {{ $post->title }}
+          </a>
+        </li>
+      @endforeach
 
-  @if ($posts->hasPages())
-    <div class="mt-6 pt-6 border-t">
-      {{ $posts->links() }}
-    </div>
-  @endif
+      @empty($posts)
+        <li class="text-gray-500">
+          No posts yet.
+        </li>
+      @endempty
+    </ul>
+
+    @if ($posts->hasPages())
+      <div class="pt-6 mt-6 border-t">
+        {{ $posts->links() }}
+      </div>
+    @endif
+  </x-container>
 </div>
