@@ -10,10 +10,14 @@
   </head>
 
   <body class="text-base leading-normal tracking-normal text-gray-800">
-    <x-sections.header />
+    <div class="flex flex-col min-h-screen">
+      <x-sections.header />
 
-    <div>
-      {{ $slot }}
+      <div class="flex-1">
+        {{ $slot }}
+      </div>
+
+      <x-sections.footer />
     </div>
 
     @livewireScriptConfig
