@@ -8,7 +8,7 @@ This is my preferred starting point to quickly bootstrap [TALL stack](https://ta
 
 - 🚀 Quick, clean starting point with an example **Post** model and resource.
 - 🧑‍💻 Fully pre-configured and [customized](#plugins-used) Filament panel with best practices in place.
-- 🎨 Clean, [minimally styled](#screenshots) frontend powered by Livewire.
+- 🎨 Clean, minimally styled frontend powered by Livewire.
 - 💄 TailwindCSS and Vite ready for immediate use.
 - 👷 Pre-bundled Livewire and Alpine for easy extendability.
 - ⚡️ SPA-ready in both Filament and the frontend.
