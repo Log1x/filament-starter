@@ -37,6 +37,7 @@ class AdminPanelProvider extends PanelProvider
             ->login(Login::class)
             ->profile()
             ->spa()
+            ->databaseNotifications()
             ->plugins([
                 BreezyCore::make()
                     ->myProfile(
