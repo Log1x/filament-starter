@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "awcodes/filament-curator",
-            "version": "v3.3.0",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/awcodes/filament-curator.git",
-                "reference": "25ccd022081e8fd6c82e5fb461aaaea2e79967fa"
+                "reference": "171c00f9aa0bef49af44ab2712808284dd5a8b7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awcodes/filament-curator/zipball/25ccd022081e8fd6c82e5fb461aaaea2e79967fa",
-                "reference": "25ccd022081e8fd6c82e5fb461aaaea2e79967fa",
+                "url": "https://api.github.com/repos/awcodes/filament-curator/zipball/171c00f9aa0bef49af44ab2712808284dd5a8b7f",
+                "reference": "171c00f9aa0bef49af44ab2712808284dd5a8b7f",
                 "shasum": ""
             },
             "require": {
@@ -31,6 +31,10 @@
                 "filament/filament": "^3.0",
                 "laravel/pint": "^1.0",
                 "nunomaduro/collision": "^7.0",
+                "orchestra/testbench": "^8.0",
+                "pestphp/pest": "^2.19",
+                "pestphp/pest-plugin-laravel": "^2.2",
+                "pestphp/pest-plugin-livewire": "^2.1",
                 "spatie/laravel-ray": "^1.26"
             },
             "type": "library",
@@ -47,7 +51,9 @@
                 ],
                 "psr-4": {
                     "Awcodes\\Curator\\": "src",
-                    "Awcodes\\Curator\\Database\\Factories\\": "database/factories"
+                    "Awcodes\\Curator\\Tests\\": "tests/src",
+                    "Awcodes\\Curator\\Database\\Factories\\": "database/factories",
+                    "Awcodes\\Curator\\Tests\\Database\\Factories\\": "tests/database/factories"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -71,7 +77,7 @@
             ],
             "support": {
                 "issues": "https://github.com/awcodes/filament-curator/issues",
-                "source": "https://github.com/awcodes/filament-curator/tree/v3.3.0"
+                "source": "https://github.com/awcodes/filament-curator/tree/v3.3.1"
             },
             "funding": [
                 {
@@ -79,7 +85,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-18T17:46:47+00:00"
+            "time": "2023-12-22T16:30:01+00:00"
         },
         {
             "name": "awcodes/filament-gravatar",
@@ -2850,16 +2856,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.38.1",
+            "version": "v10.38.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "ced4689f495213e9d23995b36098f12a802cc15b"
+                "reference": "43da808391da3540d44a8dfeb4e46da4ad8f5723"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/ced4689f495213e9d23995b36098f12a802cc15b",
-                "reference": "ced4689f495213e9d23995b36098f12a802cc15b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/43da808391da3540d44a8dfeb4e46da4ad8f5723",
+                "reference": "43da808391da3540d44a8dfeb4e46da4ad8f5723",
                 "shasum": ""
             },
             "require": {
@@ -3051,7 +3057,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-12-20T14:52:12+00:00"
+            "time": "2023-12-22T14:39:10+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -10762,5 +10768,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
