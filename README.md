@@ -14,7 +14,6 @@ This is my preferred starting point to quickly bootstrap [TALL stack](https://ta
 - ⚡️ SPA-ready in both Filament and the frontend.
 - 🔨 GitHub Actions workflows for Pint with pre-configured Dependabot for dependencies.
 - 🔍️ Easy programmatic SEO using [romanzipp/laravel-seo](https://github.com/romanzipp/Laravel-SEO).
-- 📝 Automatic sitemap generation using [spatie/laravel-sitemap](https://github.com/spatie/laravel-sitemap).
 
 ## Requirements
 
