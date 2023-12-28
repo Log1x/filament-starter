@@ -12,7 +12,7 @@
 
       <div>
         <x-button
-          :icon="Auth::check() ? 'heroicon-o-cog' : 'heroicon-o-user'"
+          :icon="Auth::check() ? 'heroicon-o-cog' : 'heroicon-s-user'"
           size="xs"
           url="/admin"
         >
