@@ -38,6 +38,13 @@ class Post extends Model
     ];
 
     /**
+     * Determine whether a sitemap should be generated.
+     *
+     * @var bool
+     */
+    public $sitemap = true;
+
+    /**
      * Get the user that owns the post.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
