@@ -2,7 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Post;
+use Exception;
+use Filament\Facades\Filament;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File as Storage;
 use Spatie\Sitemap\Sitemap;
@@ -29,17 +30,13 @@ class SitemapGenerateCommand extends Command
 
     /**
      * The sitemaps.
-     *
-     * @var array
      */
-    protected $sitemaps = [];
+    protected array $sitemaps = [];
 
     /**
      * The chunk count.
-     *
-     * @var int
      */
-    protected $chunks;
+    protected int $chunks = 0;
 
     /**
      * Execute the console command.
@@ -48,18 +45,14 @@ class SitemapGenerateCommand extends Command
      */
     public function handle()
     {
-        ini_set('memory_limit', -1);
-
         $this->chunks = $this->option('chunk');
 
         $this->components->info('Generating sitemaps');
 
         $this
-            ->generateStaticPageSitemaps()
-            ->generatePostSitemaps()
+            ->generateResourceSitemaps()
             ->generateSitemapIndex();
 
-        $this->newLine();
         $this->components->info('Sitemaps generated successfully');
     }
 
@@ -69,6 +62,12 @@ class SitemapGenerateCommand extends Command
     protected function generateSitemapIndex(): self
     {
         $count = count($this->sitemaps);
+
+        if ($count === 0) {
+            $this->components->warn('No sitemaps found');
+
+            return $this;
+        }
 
         $this->components->task("Generating index <fg=blue>sitemap.xml</> with <fg=blue>{$count}</> items", function () {
             $index = SitemapIndex::create();
@@ -90,57 +89,51 @@ class SitemapGenerateCommand extends Command
     }
 
     /**
-     * Generate the static page sitemaps.
+     * Generate the resource sitemaps.
      */
-    protected function generateStaticPageSitemaps(): self
+    protected function generateResourceSitemaps(): self
     {
-        $this->components->task('Generating sitemap <fg=blue>page-sitemap.xml.gz</> with <fg=blue>static</> items', function () {
-            $sitemap = Sitemap::create();
+        $resources = collect(Filament::getPanels())
+            ->flatMap(fn ($panel) => $panel->getResources())
+            ->map(fn ($resource) => $resource::getModel())
+            ->filter(fn ($model) => $model::make()->sitemap)
+            ->unique();
 
-            $home = Url::create(
-                route('home')
-            )->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY);
+        if ($resources->isEmpty()) {
+            $this->components->warn('No resources found with sitemap enabled');
 
-            $sitemap->add($home);
+            return $this;
+        }
 
-            $this->sitemaps['page'] = $sitemap;
+        $resources->each(function ($model) {
+            $model::chunk($this->chunks, function ($records, $page) {
+                $key = $records->first()->getTable();
+                $key = $page === 1 ? $key : "{$key}-{$page}";
+                $count = count($records);
 
-            $this->writeToGzip(
-                public_path('page-sitemap.xml.gz'),
-                $sitemap->render()
-            );
-        });
+                $this->components->task("Generating sitemap <fg=blue>{$key}-sitemap.xml.gz</> with <fg=blue>{$count}</> items", function () use ($records, $key) {
+                    $sitemap = Sitemap::create($key);
 
-        return $this;
-    }
+                    foreach ($records as $record) {
+                        if (! $record->url) {
+                            throw new Exception("A URL attribute must be defined on the {$record->getTable()} model.");
+                        }
 
-    /**
-     * Generate the post sitemaps.
-     */
-    protected function generatePostSitemaps(): self
-    {
-        Post::chunk($this->chunks, function ($posts, $page) {
-            $key = $page === 1 ? 'post' : "post-{$page}";
-            $count = count($posts);
+                        $url = Url::create($record->url)
+                            ->setLastModificationDate($record->updated_at)
+                            ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
+                            ->setPriority(0.6);
 
-            $this->components->task("Generating sitemap <fg=blue>{$key}-sitemap.xml.gz</> with <fg=blue>{$count}</> items", function () use ($posts, $key) {
-                $sitemap = Sitemap::create($key);
+                        $sitemap->add($url);
+                    }
 
-                foreach ($posts as $post) {
-                    $url = Url::create($post->url)
-                        ->setLastModificationDate($post->updated_at)
-                        ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
-                        ->setPriority(0.6);
+                    $this->writeToGzip(
+                        public_path("{$key}-sitemap.xml.gz"),
+                        $sitemap->render()
+                    );
 
-                    $sitemap->add($url);
-                }
-
-                $this->writeToGzip(
-                    public_path("{$key}-sitemap.xml.gz"),
-                    $sitemap->render()
-                );
-
-                $this->sitemaps[$key] = $sitemap;
+                    $this->sitemaps[$key] = $sitemap;
+                });
             });
         });
 
