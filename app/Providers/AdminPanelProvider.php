@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers\Filament;
+namespace App\Providers;
 
 use App\Filament\Auth\Login;
 use Awcodes\Curator\CuratorPlugin;
