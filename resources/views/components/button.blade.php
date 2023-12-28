@@ -39,12 +39,12 @@
 
 <{{ $tag }} {{ $attributes->merge(['class' => "inline-flex items-center justify-center rounded-md transition-colors {$size} {$color}"]) }}>
   @if ($icon)
-    @svg($icon, "{$iconSize} mr-2")
+    <x-icon :name="$icon" class="{{ $iconSize }} mr-2" />
   @endif
 
   <span>{{ $label ?? $slot }}</span>
 
   @if ($iconRight)
-    @svg($iconRight, "{$iconSize} ml-2")
+    <x-icon :name="$iconRight" class="{{ $iconSize }} ml-2" />
   @endif
 </{{ $tag }}>
