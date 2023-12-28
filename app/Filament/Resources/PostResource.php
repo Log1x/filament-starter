@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PostResource\Pages;
 use App\Models\Post;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
+use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
 use Filament\Forms\Components\Builder;
 use Filament\Forms\Form;
@@ -129,7 +130,11 @@ class PostResource extends Resource
                                     ->searchable()
                                     ->required(),
 
+                                CuratorPicker::make('image_id')
+                                    ->label('Featured Image'),
+
                                 Forms\Components\DatePicker::make('published_at')
+                                    ->label('Publish Date')
                                     ->default(now())
                                     ->required(),
 
@@ -149,7 +154,12 @@ class PostResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->sortable()
                     ->searchable(),
+
+                CuratorColumn::make('image')
+                    ->circular()
+                    ->size(32),
 
                 Tables\Columns\TextColumn::make('user.name')
                     ->label('Author')
@@ -158,7 +168,8 @@ class PostResource extends Resource
 
                 Tables\Columns\IconColumn::make('is_published')
                     ->label('Published')
-                    ->boolean(),
+                    ->boolean()
+                    ->sortable(),
 
                 Tables\Columns\TextColumn::make('published_at')
                     ->dateTime()

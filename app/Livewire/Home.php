@@ -32,7 +32,7 @@ class Home extends Component
 
         $posts = Post::published()
             ->latest('published_at')
-            ->paginate(10);
+            ->paginate(6);
 
         return view('livewire.home', compact('posts'));
     }

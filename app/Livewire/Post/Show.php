@@ -48,10 +48,15 @@ class Show extends Component
                 Schema::article()
                     ->headline($this->post->title)
                     ->articleBody($this->post->excerpt)
+                    ->image($this->post->image?->url)
                     ->datePublished($this->post->published_at)
                     ->dateModified($this->post->updated_at)
                     ->author(Schema::person()->name($this->post->user->name))
             );
+
+        if ($this->post->image) {
+            seo()->image($this->post->image->url);
+        }
 
         return view('livewire.post.show');
     }
