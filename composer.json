@@ -24,7 +24,6 @@
         "pboivin/filament-peek": "^2.2",
         "romanzipp/laravel-seo": "^2.6",
         "sinnbeck/markdom": "^2.0",
-        "spatie/laravel-sitemap": "^7.0",
         "z3d0x/filament-logger": "^0.6.2"
     },
     "require-dev": {
