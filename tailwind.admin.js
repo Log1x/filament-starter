@@ -7,6 +7,7 @@ module.exports = {
   presets: [defaultConfig, filamentConfig],
   content: [
     './app/Filament/**/*.php',
+    './resources/views/components/logo.blade.php',
     './resources/views/filament/**/*.blade.php',
     './vendor/awcodes/filament-curator/resources/**/*.blade.php',
     './vendor/bezhansalleh/filament-exceptions/resources/**/*.blade.php',
