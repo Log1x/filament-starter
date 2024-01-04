@@ -1,6 +1,6 @@
 # Filament Starter
 
-This is my preferred starting point to quickly bootstrap [TALL stack](https://tallstack.dev/) projects utilizing [Filament](https://filamentphp.com/) for the admin panel.
+Here lives a beautiful starting point to quickly bootstrap your next [TALL stack](https://tallstack.dev/) application utilizing [Filament](https://filamentphp.com/) for the admin panel.
 
 ![Screenshot](https://i.imgur.com/AxerbeO.png)
 
@@ -8,11 +8,11 @@ This is my preferred starting point to quickly bootstrap [TALL stack](https://ta
 
 - 🚀 Quick, clean starting point with an example **Post** model and resource.
 - 🧑‍💻 Fully pre-configured and [customized](#plugins-used) Filament panel with best practices in place.
-- 🎨 Clean, minimally styled frontend powered by Livewire.
-- 💄 TailwindCSS and Vite ready for immediate use.
-- 👷 Pre-bundled Livewire and Alpine for easy extendability.
+- 🎨 Clean, minimally styled frontend powered by [Livewire](https://livewire.laravel.com/).
+- 💄 [TailwindCSS](https://tailwindcss.com/) and [Vite](https://vitejs.dev/) ready for immediate use.
+- 👷 Pre-bundled Livewire and [Alpine](https://alpinejs.dev/) for easy extendability.
 - ⚡️ SPA-ready in both Filament and the frontend.
-- 🔨 GitHub Actions workflows for Pint with pre-configured Dependabot for dependencies.
+- 🔨 GitHub Actions workflows for [Pint](https://github.com/laravel/pint) with pre-configured Dependabot for dependencies.
 - 🔍️ Easy programmatic SEO using [romanzipp/laravel-seo](https://github.com/romanzipp/Laravel-SEO).
 
 ## Requirements
