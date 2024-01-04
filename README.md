@@ -26,7 +26,7 @@ Make sure all dependencies have been installed before moving on:
 
 ## Getting Started
 
-Start by cloning the Filament Starter repository and initializing the `.env` file:
+Start by cloning the Filament Starter repository and configuring the `.env` file:
 
 ```sh
 composer create-project log1x/filament-starter:dev-main
