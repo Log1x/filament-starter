@@ -1,8 +1,5 @@
 # Filament Starter
 
-![Total Downloads](https://img.shields.io/packagist/dt/log1x/filament-starter.svg?style=flat-square)
-![Build Status](https://img.shields.io/github/actions/workflow/status/log1x/filament-starter/main.yml?branch=main&style=flat-square)
-
 Here lives a beautiful starting point to quickly bootstrap your next [TALL stack](https://tallstack.dev/) application utilizing [Filament](https://filamentphp.com/) for the admin panel.
 
 ![Screenshot](https://i.imgur.com/AxerbeO.png)
