@@ -29,11 +29,8 @@ Make sure all dependencies have been installed before moving on:
 Start by cloning the Filament Starter repository and initializing the `.env` file:
 
 ```sh
-git clone --depth=1 git@github.com:log1x/filament-starter.git
+composer create-project log1x/filament-starter:dev-main
 cd filament-starter
-cp .env.example .env
-composer install
-php artisan key:generate
 ```
 
 After `.env` is configured, you can proceed to migrate & seed the database:
