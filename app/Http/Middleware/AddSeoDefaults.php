@@ -48,16 +48,16 @@ class AddSeoDefaults
 
             LinkMeta::make()
                 ->rel('mask-icon')
-                ->attr('color', '#54aeef')
+                ->attr('color', '#3b82f6')
                 ->href('/safari-pinned-tab.svg'),
 
             Meta::make()
                 ->name('theme-color')
-                ->content('#54aeef'),
+                ->content('#3b82f6'),
 
             Meta::make()
                 ->name('msapplication-TileColor')
-                ->content('#54aeef'),
+                ->content('#3b82f6'),
 
             OpenGraph::make()
                 ->property('title')
