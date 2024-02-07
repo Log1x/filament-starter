@@ -17,7 +17,7 @@
     "diglactic/laravel-breadcrumbs": "^8.1",
     "filament/filament": "^3.1",
     "guzzlehttp/guzzle": "^7.2",
-    "jeffgreco13/filament-breezy": "v2.2.1.1",
+    "jeffgreco13/filament-breezy": "^2.2",
     "laravel/framework": "^10.10",
     "laravel/sanctum": "^3.3",
     "laravel/tinker": "^2.8",
