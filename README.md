@@ -19,7 +19,7 @@ Here lives a beautiful starting point to quickly bootstrap your next [TALL stack
 
 Make sure all dependencies have been installed before moving on:
 
-- [PHP](https://secure.php.net/manual/en/install.php) >= 8.1
+- [PHP](https://secure.php.net/manual/en/install.php) >= 8.2
 - [Composer](https://getcomposer.org/download/)
 - [Node.js](http://nodejs.org/) >= 18
 - [Yarn](https://yarnpkg.com/en/docs/install)
