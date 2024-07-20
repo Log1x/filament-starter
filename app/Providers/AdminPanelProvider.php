@@ -46,18 +46,23 @@ class AdminPanelProvider extends PanelProvider
                         hasAvatars: false
                     )
                     ->enableTwoFactorAuthentication(),
+
                 CuratorPlugin::make()
                     ->label('Media')
                     ->pluralLabel('Media Library')
                     ->navigationIcon('heroicon-o-photo')
                     ->navigationGroup('Media')
                     ->navigationCountBadge(),
-                FilamentExceptionsPlugin::make(),
+
                 FilamentJobsMonitorPlugin::make()
                     ->navigationCountBadge()
                     ->navigationGroup('Settings'),
+
                 FilamentPeekPlugin::make()
                     ->disablePluginStyles(),
+
+                FilamentExceptionsPlugin::make(),
+
                 GravatarPlugin::make(),
             ])
             ->defaultAvatarProvider(GravatarProvider::class)

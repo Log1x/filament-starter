@@ -52,7 +52,7 @@ class Login extends BaseAuth
     }
 
     /**
-     * Authenticate the user.
+     * Attempt to authenticate the user.
      */
     public function authenticate(): ?LoginResponse
     {

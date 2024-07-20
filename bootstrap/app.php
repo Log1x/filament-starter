@@ -16,9 +16,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->appendToGroup('web', [
+        $middleware->web([
             App\Http\Middleware\AddSeoDefaults::class,
         ]);
+
+        $middleware->redirectTo(fn () => Filament\Pages\Dashboard::getUrl());
     })
     ->withExceptions(function (Exceptions $exceptions) {
         $exceptions->reportable(fn (Throwable $e) => $exceptions->handler->shouldReport($e) &&

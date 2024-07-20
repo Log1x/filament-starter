@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 
-const filamentConfig = require('./vendor/filament/filament/tailwind.config.preset')
-const defaultConfig = require('./tailwind.config')
-
 module.exports = {
-  presets: [defaultConfig, filamentConfig],
+  presets: [
+    require('./tailwind.config'),
+    require('./vendor/filament/filament/tailwind.config.preset'),
+  ],
   content: [
     './app/Filament/**/*.php',
     './resources/views/components/logo.blade.php',
