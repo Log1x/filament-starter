@@ -17,7 +17,7 @@
     "diglactic/laravel-breadcrumbs": "^9.0",
     "filament/filament": "^3.2.50",
     "jeffgreco13/filament-breezy": "^2.2",
-    "laravel/framework": "^11.0",
+    "laravel/framework": "^11.31",
     "laravel/sanctum": "^4.0",
     "laravel/tinker": "^2.9",
     "livewire/livewire": "^3.3",
