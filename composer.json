@@ -14,7 +14,7 @@
     "awcodes/filament-gravatar": "^2.0",
     "bezhansalleh/filament-exceptions": "^2.0",
     "croustibat/filament-jobs-monitor": "^2.4.0",
-    "diglactic/laravel-breadcrumbs": "^9.0",
+    "diglactic/laravel-breadcrumbs": "^10.0",
     "filament/filament": "^3.2.50",
     "jeffgreco13/filament-breezy": "^2.2",
     "laravel/framework": "^11.31",
