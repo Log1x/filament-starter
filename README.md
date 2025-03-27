@@ -22,7 +22,6 @@ Make sure all dependencies have been installed before moving on:
 - [PHP](https://secure.php.net/manual/en/install.php) >= 8.2
 - [Composer](https://getcomposer.org/download/)
 - [Node.js](http://nodejs.org/) >= 18
-- [Yarn](https://yarnpkg.com/en/docs/install)
 
 ## Getting Started
 
@@ -48,11 +47,11 @@ Password: admin
 
 ### Build Assets
 
-The project assets are compiled using Vite. This can be done by installing the dependencies and running the build command with Yarn.
+The project assets are compiled using Vite. This can be done by installing the dependencies and running the build command with npm.
 
 ```sh
-yarn install
-yarn build
+npm install
+npm run build
 ```
 
 ## Plugins Used
