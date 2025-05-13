@@ -12,7 +12,7 @@
     "php": "^8.2",
     "awcodes/filament-curator": "^3.3",
     "awcodes/filament-gravatar": "^2.0",
-    "bezhansalleh/filament-exceptions": "^2.0",
+    "bezhansalleh/filament-exceptions": "^3.0",
     "croustibat/filament-jobs-monitor": "^2.6",
     "diglactic/laravel-breadcrumbs": "^10.0",
     "filament/filament": "^3.2.50",
