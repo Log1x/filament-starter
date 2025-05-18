@@ -7,7 +7,7 @@
     </h2>
 
     <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-      @foreach ($posts as $post)
+      @forelse ($posts as $post)
         <div>
           <a
             class="*:transition group"
@@ -33,11 +33,9 @@
             </h3>
           </a>
         </div>
-      @endforeach
-
-      @empty($posts)
+      @empty
         <div>No posts yet.</div>
-      @endempty
+      @endforelse
     </div>
 
     @if ($posts->hasPages())
